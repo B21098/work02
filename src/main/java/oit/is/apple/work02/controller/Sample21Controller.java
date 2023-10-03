@@ -39,5 +39,9 @@ public class Sample21Controller {
     return "sample21.html";
   }
 
+  @GetMapping("/sample24")
+  public String sample24() {
+    return "sample24.html";
+  }
 
 }
