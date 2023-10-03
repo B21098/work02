@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Sample21Controller
@@ -30,5 +31,13 @@ public class Sample21Controller {
     model.addAttribute("tasuResult1", tasuResult);
     return "sample21.html";
   }
+
+  @GetMapping("/sample23")
+  public String sample23(@RequestParam Integer tasu1, @RequestParam Integer tasu2, ModelMap model) {
+    int tasuResult = tasu1 + tasu2;
+    model.addAttribute("tasuResult2", tasuResult);
+    return "sample21.html";
+  }
+
 
 }
